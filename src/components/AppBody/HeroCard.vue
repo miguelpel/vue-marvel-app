@@ -1,8 +1,15 @@
 <script setup lang="ts">
+    import {PropType} from 'vue'
     import { useStore } from 'vuex';
+    import type { HeroType } from '../types/heroes.ts';
     const store = useStore();
 
-    const props = defineProps(['hero'])
+    const props = defineProps({
+        hero: {
+            type: Object as PropType<HeroType>,
+            required: true
+        }
+    })
     const hero = props.hero;
 
     let thumbnailPath = "";

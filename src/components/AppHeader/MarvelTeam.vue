@@ -12,7 +12,10 @@
 
 <template>
   <div class="App_team_container">
-      <div v-for="item in team">
+      <div
+        v-for="item in team"
+        :key="item.id"
+      >
         <TeamMember :member="item"/>
       </div>
   </div>

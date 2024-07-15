@@ -1,13 +1,13 @@
 <script setup lang="ts">
-    import Logo from './Logo.vue';
-    import Team from './Team.vue';
-    import Input from './Input.vue';
+    import MarvelLogo from './MarvelLogo.vue';
+    import MarvelTeam from './MarvelTeam.vue';
+    import SarchHeroInput from './SarchHeroInput.vue';
 </script>
 
 <template>
   <div class="App-header">
-    <Logo />
-    <Team />
-    <Input />
+    <MarvelLogo />
+    <MarvelTeam />
+    <SarchHeroInput />
   </div>
 </template>

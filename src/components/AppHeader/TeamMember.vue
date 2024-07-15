@@ -1,5 +1,14 @@
 <script setup lang="ts">
-    const props = defineProps(['member'])
+    import {PropType} from 'vue';
+    import type { HeroType } from '../types/heroes.ts';
+
+    const props = defineProps({
+        member: {
+            type: Object as PropType<HeroType>,
+            required: true,
+
+        }
+    })
     const member = props.member;
 
     let thumbnailPath = "";
@@ -7,6 +16,7 @@
     if (member && member.thumbnail) {
         thumbnailPath = `${member?.thumbnail.path}/portrait_small.jpg`;
     }
+    
 </script>
 
 <template>

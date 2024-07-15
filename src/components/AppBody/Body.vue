@@ -22,7 +22,10 @@
       </h1>
     </div>
     <div v-else>
-      <div v-for="item in storeitems">
+      <div 
+        v-for="item in storeitems"
+        :key="item.id"
+      >
         <HeroCard :hero="item" />
       </div>
     </div>
